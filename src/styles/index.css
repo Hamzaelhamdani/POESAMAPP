@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+:root {
+  /* Orange Telecom brand colors */
+  --ot-50: #fff5eb;
+  --ot-100: #ffe9d6;
+  --ot-200: #ffd0a8;
+  --ot-300: #ffb97b;
+  --ot-400: #ff9a4d;
+  --ot-500: #ff7f00;
+  --ot-600: #ff6600;
+  --ot-700: #e65500;
+  --ot-800: #cc4700;
+  --ot-900: #993400;
+
+  --brand: var(--ot-600);
+  --brand-light: var(--ot-200);
+  --brand-dark: var(--ot-700);
+}
+
+/* Print styles */
+@media print {
+  body { background: white }
+  button, input, textarea { display: none !important }
+  .rounded-2xl { border-radius: 0.5rem }
+}
