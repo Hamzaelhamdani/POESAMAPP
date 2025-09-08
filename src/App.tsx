@@ -11,7 +11,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-6xl mx-auto space-y-6">
         <header className="flex items-center justify-between">
-          <h1 className="text-2xl font-bold">POESAM Bracket 2025</h1>
+          <h1 className="text-2xl font-bold">POESAM IN THE RING 2025</h1>
           <ControlBar />
         </header>
 

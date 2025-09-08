@@ -169,21 +169,21 @@ export function BracketProvider({ children }: { children: React.ReactNode }) {
   const randomize = () => {
     setState(s => {
       const startups = s.startups
-      const lvl1 = startups.slice(0, 4)
-      const lvl2 = startups.slice(4, 8)
-      const lvl3 = startups.slice(8, 11)
+  const shuffle = <T,>(arr: T[]) => arr.slice().sort(() => Math.random() - 0.5) as T[]
+  const lvl1 = shuffle(startups.slice(0, 4))
+  const lvl2 = startups.slice(4, 8)
+  const lvl3 = startups.slice(8, 11)
       const pools = emptyPools()
-      pools.p1[0] = lvl1[0] || null
-      pools.p2[0] = lvl1[1] || null
-      pools.p3[0] = lvl1[2] || null
-      pools.p4[0] = lvl1[3] || null
-      const shuffle = <T,>(arr: T[]) => arr.slice().sort(() => Math.random() - 0.5) as T[]
-      const lvl2s = shuffle(lvl2)
+  pools.p1[0] = lvl1[0] || null
+  pools.p2[0] = lvl1[1] || null
+  pools.p3[0] = lvl1[2] || null
+  pools.p4[0] = lvl1[3] || null
+  const lvl2s = shuffle(lvl2)
       pools.p1[1] = lvl2s[0] || null
       pools.p2[1] = lvl2s[1] || null
       pools.p3[1] = lvl2s[2] || null
       pools.p4[1] = lvl2s[3] || null
-      const lvl3s = shuffle(lvl3)
+  const lvl3s = shuffle(lvl3)
       pools.p1[2] = lvl3s[0] || null
       pools.p2[2] = lvl3s[1] || null
       pools.p3[2] = lvl3s[2] || null
